@@ -9,13 +9,16 @@ Command to activate the virtual environment 'env' :
 Command to install flask :
     pip install flask 
 
+Command to set the flask-DEBUG environment variable on :
+    set FLASK_DEBUG=1
+
 Command to run this flask app:
     python app4.py
 
 Command to Deactivate the virtual environment 'env' :
     deactivate    
 '''
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__) 
 
@@ -23,9 +26,13 @@ app = Flask(__name__)
 def index():
     return '<h1>Hello!</h1>'
 
-@app.route('/home')
+@app.route('/home', methods=['POST', 'GET'])
 def home():
     return '<h1>Hello! You are on the HOME page!</h1>'
+
+@app.route('/json')
+def json():
+    return jsonify({'key': 'value', 'key2': [1, 2, 3]})
 
 if __name__ == '__main__':
     app.run()
