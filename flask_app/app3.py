@@ -1,4 +1,4 @@
-# app1.py
+# app3.py
 '''
 Command to create virtual environment 'env' for this flask app : 
     python -m venv env 
@@ -9,14 +9,8 @@ Command to activate the virtual environment 'env' :
 Command to install flask :
     pip install flask    
 
-Command to set the flask environment variable to this pgm :
-    set FLASK_APP=app1.py
-
-Command to set the flask-DEBUG environment variable on :
-    set FLASK_DEBUG=1
-
 Command to run the flask app :
-    flask run
+    python app3.py
 
 Command to Deactivate the virtual environment 'env' :
     deactivate    
@@ -27,7 +21,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Hello!</h1>'
+    return '<h1>Hello!</h1>' 
+
+if __name__ == '__main__':
+    app.run()
 
 
 

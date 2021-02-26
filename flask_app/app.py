@@ -1,4 +1,4 @@
-# app.py
+# app3.py
 '''
 Command to create virtual environment 'env' for this flask app : 
     python -m venv env 
@@ -6,11 +6,11 @@ Command to create virtual environment 'env' for this flask app :
 Command to activate the virtual environment 'env' :
     env\Scripts\activate.bat 
 
-Command to set the flask environment variable to this pgm :
-    set FLASK_APP=app.py
+Command to install flask :
+    pip install flask    
 
 Command to run the flask app :
-    flask run
+    python app3.py
 
 Command to Deactivate the virtual environment 'env' :
     deactivate    
