@@ -1,13 +1,13 @@
-<html>
-<head>
-    <title>The Form</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}The Form{% endblock %}
+
+{% block content %}
     <h1>Please Fill this Form</h1>
+    {{ super() }}
     <form method='POST' action='/theform'>
         <input type='text' name='name'>
         <input type='text' name='location'>
         <input type='submit' value='Submit'>
     </form>
-</body>
-</html>
+ {% endblock %}
